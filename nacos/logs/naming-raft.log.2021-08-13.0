@@ -1,0 +1,30 @@
+2021-08-13 17:04:58,329 INFO initializing Raft sub-system
+
+2021-08-13 17:04:58,330 INFO finish loading all datums, size: 0 cost 1 ms.
+
+2021-08-13 17:04:58,333 INFO raft notifier started
+
+2021-08-13 17:04:58,334 INFO cache loaded, datum count: 0, current term: 0
+
+2021-08-13 17:04:58,334 INFO finish to load data from disk, cost: 5 ms.
+
+2021-08-13 17:04:58,336 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-08-13 17:04:58,237 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2021-08-13 17:04:58,346 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2021-08-13 17:04:58,421 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-08-13 17:05:00,072 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-08-13 17:05:03,232 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-08-13 17:05:03,232 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2021-08-13 17:05:03,232 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-08-13 17:05:06,243 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-08-13 17:05:17,719 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-produce
+

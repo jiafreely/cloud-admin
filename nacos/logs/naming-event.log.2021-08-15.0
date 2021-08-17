@@ -1,0 +1,66 @@
+2021-08-15 00:02:47,526 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:02:47,526 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:02:47,526 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:04:23,370 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:04:23,370 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-15 00:05:49,379 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:05:49,379 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:05:49,380 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:08:06,989 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:08:06,989 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-15 00:17:54,877 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:17:54,877 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:17:54,877 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:20:06,486 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:20:06,486 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-15 00:21:17,360 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:21:17,360 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:22:46,623 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:22:46,623 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-15 00:23:08,066 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:23:08,066 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:26:11,094 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:26:11,094 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-15 00:27:14,474 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:27:14,474 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:27:14,475 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:37:24,467 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:37:24,467 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-15 00:37:42,687 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:37:42,687 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:37:42,687 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-15 00:38:53,109 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-15 00:38:53,109 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+

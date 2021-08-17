@@ -1,0 +1,58 @@
+2021-08-10 08:35:30,639 INFO DEFAULT_GROUP@@service-edu is changed, add it to push queue.
+
+2021-08-10 08:35:31,797 INFO DEFAULT_GROUP@@service-oss is changed, add it to push queue.
+
+2021-08-10 08:35:36,115 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:35:56,136 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:35:56,136 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:35:56,822 INFO DEFAULT_GROUP@@service-oss is changed, add it to push queue.
+
+2021-08-10 08:36:00,665 INFO DEFAULT_GROUP@@service-edu is changed, add it to push queue.
+
+2021-08-10 08:36:02,218 INFO DEFAULT_GROUP@@service-oss is changed, add it to push queue.
+
+2021-08-10 08:36:02,620 INFO DEFAULT_GROUP@@service-edu is changed, add it to push queue.
+
+2021-08-10 08:36:04,775 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:38:04,042 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:38:25,339 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:41:06,201 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:41:06,201 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:41:11,045 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:42:01,211 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:42:10,301 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:45:06,562 INFO DEFAULT_GROUP@@service-edu is changed, add it to push queue.
+
+2021-08-10 08:45:06,562 INFO serviceName: DEFAULT_GROUP@@service-edu changed, schedule push for: 10.111.26.200:55509, agent: Nacos-Java-Client:v1.1.1, key: 10.111.26.200,55509,1138459434100
+
+2021-08-10 08:45:06,562 INFO send udp packet: 10.111.26.200,55509,1138459434100
+
+2021-08-10 08:45:06,562 INFO received ack: {"type": "push-ack", "lastRefTime":"1138459434100", "data":""} from: 10.111.26.200:, cost: 55509 ms, unacked: 0, total push: 0
+
+2021-08-10 08:45:06,647 INFO DEFAULT_GROUP@@infrastructure-apigateway is changed, add it to push queue.
+
+2021-08-10 08:45:06,747 INFO DEFAULT_GROUP@@service-oss is changed, add it to push queue.
+
+2021-08-10 08:45:06,747 INFO serviceName: DEFAULT_GROUP@@service-oss changed, schedule push for: 10.111.26.200:62196, agent: Nacos-Java-Client:v1.1.1, key: 10.111.26.200,62196,1138643273200
+
+2021-08-10 08:45:06,747 INFO send udp packet: 10.111.26.200,62196,1138643273200
+
+2021-08-10 08:45:16,754 INFO retry to push data, key: 10.111.26.200,62196,1138643273200
+
+2021-08-10 08:45:16,754 INFO send udp packet: 10.111.26.200,62196,1138643273200
+
+2021-08-10 08:45:26,755 INFO retry to push data, key: 10.111.26.200,62196,1138643273200
+
+2021-08-10 08:45:26,755 WARN max re-push times reached, retry times 2, key: 10.111.26.200,62196,1138643273200
+
