@@ -1,5 +1,5 @@
 server:
-  port: 8120 #服务端口
+  port: 8120 #comsumers服务端口
   tomcat:
     max-threads: 200 #tomcat的最大并发值修改为10,默认是200
 spring:

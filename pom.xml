@@ -41,6 +41,7 @@
         <docker.image.prefix>zx</docker.image.prefix>
         <cloud-alibaba.version>2.1.0.RELEASE</cloud-alibaba.version>
         <apache.xmlbeans.version>3.1.0</apache.xmlbeans.version>
+        <hutool.version>5.4.7</hutool.version>
     </properties>
 
     <dependencyManagement>
@@ -168,6 +169,12 @@
                 <groupId>com.alibaba.otter</groupId>
                 <artifactId>canal.client</artifactId>
                 <version>${canal.client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
