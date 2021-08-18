@@ -3,6 +3,7 @@ package com.cloud.service.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.cloud.service.config.HttpServletContextAware;
 import com.cloud.service.entity.Teacher;
 import com.cloud.service.result.R;
 import com.cloud.service.service.TeacherService;
@@ -13,6 +14,8 @@ import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * <p>
@@ -27,10 +30,40 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Api(description = "教师")
 @RequestMapping("/admin/produce/teacher")
-public class TeacherController {
+public class TeacherController extends HttpServletContextAware {
 
     @Autowired
     private TeacherService teacherService;
+
+    /**
+     * @description: TODO
+     * http请求获取
+     * @return: com.cloud.service.result.R
+     * @author: xjh
+     * @date: 2021/8/18 11:00
+     */
+    @ApiOperation(value = "Http服务提供者")
+    @GetMapping("serviceProviderByHttp")
+    public R serviceProviderByHttp() {
+        HttpServletRequest request = getRequest();
+        log.info("Http服务调用:" + request.getHeader("JF_UR"));
+        return R.ok().data("teacherList", teacherService.list());
+    }
+
+    /**
+     * @description: TODO
+     * http请求获取
+     * @return: com.cloud.service.result.R
+     * @author: xjh
+     * @date: 2021/8/18 11:00
+     */
+    @ApiOperation(value = "RestTemplate服务提供者")
+    @GetMapping("serviceProviderByRestTemplate")
+    public R serviceProviderByRestTemplate() {
+        log.info("restTempalte服务调用");
+        return R.ok().data("teacherList", teacherService.list());
+    }
+
 
     @ApiOperation(value = "查询全部教师")
     @GetMapping("queryAllList")
@@ -56,7 +89,7 @@ public class TeacherController {
 
     @ApiOperation(value = "根据id删除")
     @DeleteMapping("deleteTeacherById/{id}")
-    public R deleteTeacherById(@ApiParam(value = "id",required = true) @PathVariable Long id) {
+    public R deleteTeacherById(@ApiParam(value = "id", required = true) @PathVariable Long id) {
         return R.ok().data("code", teacherService.removeById(id));
     }
 
@@ -69,7 +102,7 @@ public class TeacherController {
 
     @ApiOperation(value = "修改数据")
     @PostMapping("updateById")
-    public R updateById(@ApiParam(value = "教师id",required = true) @RequestParam String id) {
+    public R updateById(@ApiParam(value = "教师id", required = true) @RequestParam String id) {
         Teacher teacher = teacherService.getById(id);
         teacher.setId(id);
         teacher.setName(RandomUtils.getSixBitRandom());
