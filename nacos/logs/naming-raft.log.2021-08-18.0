@@ -1,0 +1,32 @@
+2021-08-18 10:25:47,233 INFO initializing Raft sub-system
+
+2021-08-18 10:25:47,249 INFO raft notifier started
+
+2021-08-18 10:25:47,249 INFO finish loading all datums, size: 0 cost 16 ms.
+
+2021-08-18 10:25:47,249 INFO cache loaded, datum count: 0, current term: 0
+
+2021-08-18 10:25:47,249 INFO finish to load data from disk, cost: 16 ms.
+
+2021-08-18 10:25:47,249 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-08-18 10:25:47,180 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2021-08-18 10:25:47,249 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2021-08-18 10:25:47,280 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-08-18 10:25:48,795 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-08-18 10:25:52,187 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-08-18 10:25:52,187 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2021-08-18 10:25:52,187 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-08-18 10:25:55,232 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.30.1","key":"192.168.30.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-08-18 10:26:34,179 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-produce
+
+2021-08-18 10:26:40,798 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-consumers
+

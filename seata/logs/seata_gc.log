@@ -1,0 +1,5 @@
+Java HotSpot(TM) 64-Bit Server VM (25.162-b12) for windows-amd64 JRE (1.8.0_162-b12), built on Dec 19 2017 20:00:03 by "java_re" with MS VC++ 10.0 (VS2010)
+Memory: 4k page, physical 16571688k(5622092k free), swap 22057924k(4244812k free)
+CommandLine flags: -XX:CMSInitiatingOccupancyFraction=75 -XX:+CMSParallelRemarkEnabled -XX:CompressedClassSpaceSize=260046848 -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=E:\work\cloud-admin\seata\bin\\../logs/java_heapdump.hprof -XX:InitialHeapSize=2147483648 -XX:MaxDirectMemorySize=1073741824 -XX:MaxHeapSize=2147483648 -XX:MaxMetaspaceSize=268435456 -XX:MaxNewSize=1073741824 -XX:MetaspaceSize=134217728 -XX:NewSize=1073741824 -XX:-OmitStackTraceInFastThrow -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:SurvivorRatio=10 -XX:ThreadStackSize=512 -XX:-UseAdaptiveSizePolicy -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC 
+1421.993: [GC (Allocation Failure)  874496K->20333K(2010112K), 0.0122158 secs]
+7411.908: [GC (Allocation Failure)  894829K->9933K(2010112K), 0.0359003 secs]

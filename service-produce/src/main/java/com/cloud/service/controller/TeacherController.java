@@ -1,6 +1,7 @@
 package com.cloud.service.controller;
 
 
+import cn.hutool.core.lang.UUID;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cloud.service.config.HttpServletContextAware;
@@ -14,8 +15,11 @@ import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -60,7 +64,13 @@ public class TeacherController extends HttpServletContextAware {
     @ApiOperation(value = "RestTemplate服务提供者")
     @GetMapping("serviceProviderByRestTemplate")
     public R serviceProviderByRestTemplate() {
-        log.info("restTempalte服务调用");
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = requestAttributes.getRequest();
+        HttpServletResponse response = requestAttributes.getResponse();
+        String jf_sys = request.getHeader("SYS");
+        log.info("restTempalte服务调用:{}",jf_sys);
+        String sid =  UUID.fastUUID().toString().replaceAll("-","");
+        response.addHeader("JF_SN", sid);
         return R.ok().data("teacherList", teacherService.list());
     }
 
@@ -103,6 +113,7 @@ public class TeacherController extends HttpServletContextAware {
     @ApiOperation(value = "修改数据")
     @PostMapping("updateById")
     public R updateById(@ApiParam(value = "教师id", required = true) @RequestParam String id) {
+        System.out.println("接收数据:{}"+id);
         Teacher teacher = teacherService.getById(id);
         teacher.setId(id);
         teacher.setName(RandomUtils.getSixBitRandom());

@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -33,7 +32,8 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("admin/consumers/ucenter-member")
 public class UcenterMemberController {
-    private static final String url = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByRestTemplate";
+    private static final String restUrl = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByRestTemplate";
+    private static final String httpUrl = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByHttp";
     @Autowired
     private UcenterMemberService ucenterMemberService;
     @Autowired
@@ -44,27 +44,25 @@ public class UcenterMemberController {
     @ApiOperation(value = "Http服务消费者")
     @GetMapping("serviceConsumersByHttp")
     public R serviceConsumersByHttp() {
-        HttpRequest request = HttpRequest.get(url);
+        HttpRequest request = HttpRequest.get(httpUrl);
         request.header("JF_UR", "123456");
         String rid = UUID.fastUUID().toString().replaceAll("-", "");
         HttpResponse response = request.execute();
         return R.ok().data("list", "");
     }
 
+    @ApiOperation(value = "RestTemplate服务消费者")
+    @GetMapping("serviceConsumersByRestTemplate")
+    public R serviceConsumersByRestTemplate() {
+        R r = restTemplate.getForObject(restUrl, R.class);
+        return R.ok().data("list", r);
+    }
 
     @ApiOperation(value = "feign服务消费者")
     @GetMapping("serviceConsumersByFeign")
     public R serviceConsumersByFeign() {
         R r = produceService.testFeign();
         return r;
-    }
-
-    @Transactional
-    @ApiOperation(value = "RestTemplate服务消费者")
-    @GetMapping("serviceConsumersByRestTemplate")
-    public R serviceConsumersByRestTemplate() {
-        R r = restTemplate.getForObject(url, R.class);
-        return R.ok().data("list", r);
     }
 
     @ApiOperation(value = "查询教师:分页")
@@ -82,18 +80,16 @@ public class UcenterMemberController {
         return R.ok().data("code", ucenterMemberService.save(ucenterMember));
     }
 
-    @Transactional
     @ApiOperation(value = "修改数据")
     @PostMapping("updateById")
     public R updateById(@ApiParam(value = "个人id", required = true) @RequestParam String id){
         UcenterMember ucenterMember = ucenterMemberService.getById(id);
         ucenterMember.setId(id);
         ucenterMember.setNickname(RandomUtils.getSixBitRandom());
-        R r = restTemplate.getForObject(url, R.class);
+        R r = restTemplate.getForObject(restUrl, R.class);
+        produceService.updateById("1426565602478309378");
         ucenterMemberService.updateById(ucenterMember);
-        if(r.getCode() != 20000){
             int i =1/0;
-        }
         return R.ok().data("code", "success");
     }
 

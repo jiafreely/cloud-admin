@@ -17,7 +17,7 @@ import java.net.UnknownHostException;
  * @author xjh
  * @version 1.0
  * @ClassName: ServiceConsumersApplication
- * @description: TODO
+ //* @see DataSourceProxyAutoConfiguration 代理数据源类
  * @date 2021/8/17 16:46
  */
 
@@ -25,6 +25,8 @@ import java.net.UnknownHostException;
 @EnableSwagger2
 @EnableFeignClients
 @SpringBootApplication
+//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+//@Import({DataSourceProxyAutoConfiguration.class})
 @EnableDiscoveryClient
 public class ServiceConsumersApplication {
     public static void main(String[] args) throws UnknownHostException {

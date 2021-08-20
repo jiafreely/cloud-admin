@@ -11,4 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface ProduceService {
     @GetMapping("/admin/produce/teacher/serviceProviderByRestTemplate")
     R testFeign();
+
+    @GetMapping("/admin/produce/teacher/updateById")
+    R updateById(String id);
 }

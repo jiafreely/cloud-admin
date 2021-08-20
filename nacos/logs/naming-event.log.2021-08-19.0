@@ -1,0 +1,182 @@
+2021-08-19 10:41:21,525 INFO DEFAULT_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_true_false_default]
+
+2021-08-19 10:41:21,527 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@seata-server, ips: 10.111.26.200:8091_true,
+
+2021-08-19 10:45:51,544 INFO {POS} {IP-DISABLED} valid: 10.111.26.200:8091@default@DEFAULT_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1629341131690
+
+2021-08-19 10:46:06,634 INFO DEFAULT_GROUP@@seata-server {SYNC} {IP-DEAD} cluster: default, dead ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_false_false_default]
+
+2021-08-19 10:46:06,634 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@seata-server, ips: 
+
+2021-08-19 10:58:03,255 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_true_false_default]
+
+2021-08-19 10:58:03,257 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 10.111.26.200:8091_true,
+
+2021-08-19 11:36:44,913 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 11:36:44,913 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 11:36:44,918 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 11:36:51,275 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 11:36:51,275 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 11:36:51,276 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 11:38:17,756 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 11:38:17,756 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 11:38:17,842 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 11:38:17,842 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-08-19 14:04:44,619 INFO {POS} {IP-DISABLED} valid: 10.111.26.200:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1629344770488
+
+2021-08-19 14:04:44,842 INFO SEATA_GROUP@@seata-server {SYNC} {IP-DEAD} cluster: default, dead ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_false_false_default]
+
+2021-08-19 14:04:44,842 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 
+
+2021-08-19 14:04:47,749 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_true_false_default]
+
+2021-08-19 14:04:47,749 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 10.111.26.200:8091_true,
+
+2021-08-19 14:20:15,611 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 14:20:15,611 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:20:15,613 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:20:17,783 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 14:20:17,783 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 14:20:17,784 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 14:23:08,571 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8120@DEFAULT@DEFAULT_GROUP@@service-consumers, region: unknown, msg: client timeout after 15000, last beat: 1629354172885
+
+2021-08-19 14:23:13,571 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8110@DEFAULT@DEFAULT_GROUP@@service-produce, region: unknown, msg: client timeout after 15000, last beat: 1629354175723
+
+2021-08-19 14:23:23,575 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-08-19 14:23:23,575 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-08-19 14:23:28,575 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-08-19 14:23:28,575 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 14:28:30,500 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 14:28:30,500 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:28:30,502 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:28:32,721 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 14:28:32,721 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 14:28:32,722 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 14:29:43,644 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8110@DEFAULT@DEFAULT_GROUP@@service-produce, region: unknown, msg: client timeout after 15000, last beat: 1629354565532
+
+2021-08-19 14:29:43,644 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8120@DEFAULT@DEFAULT_GROUP@@service-consumers, region: unknown, msg: client timeout after 15000, last beat: 1629354567756
+
+2021-08-19 14:45:12,880 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_true_false_default]
+
+2021-08-19 14:45:12,882 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 10.111.26.200:8091_true,
+
+2021-08-19 14:45:42,780 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 14:45:42,780 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:45:42,781 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 14:45:42,781 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:45:42,781 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:45:42,781 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 14:45:44,332 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 14:45:44,332 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 14:45:44,333 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 14:46:17,787 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8110@DEFAULT@DEFAULT_GROUP@@service-produce, region: unknown, msg: client timeout after 15000, last beat: 1629355557795
+
+2021-08-19 14:46:17,787 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8110@DEFAULT@DEFAULT_GROUP@@service-produce, region: unknown, msg: client timeout after 15000, last beat: 1629355557795
+
+2021-08-19 14:46:19,340 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8120@DEFAULT@DEFAULT_GROUP@@service-consumers, region: unknown, msg: client timeout after 15000, last beat: 1629355559347
+
+2021-08-19 14:46:32,871 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-08-19 14:46:32,871 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 14:46:32,871 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-08-19 14:46:32,871 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 14:46:32,871 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 14:46:32,871 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 14:46:34,347 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-08-19 14:46:34,348 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-08-19 14:51:22,917 INFO {POS} {IP-DISABLED} valid: 10.111.26.200:8091@default@SEATA_GROUP@@seata-server, region: unknown, msg: client timeout after 15000, last beat: 1629355863101
+
+2021-08-19 14:51:37,923 INFO SEATA_GROUP@@seata-server {SYNC} {IP-DEAD} cluster: default, dead ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_false_false_default]
+
+2021-08-19 14:51:37,923 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 
+
+2021-08-19 15:43:39,843 INFO SEATA_GROUP@@seata-server {SYNC} {IP-NEW} cluster: default, new ips size: 1, content: [10.111.26.200:8091:unknown:default_1.0_true_false_default]
+
+2021-08-19 15:43:39,845 INFO [IP-UPDATED] namespace: public, service: SEATA_GROUP@@seata-server, ips: 10.111.26.200:8091_true,
+
+2021-08-19 15:44:47,062 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 15:44:47,062 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 15:44:47,063 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 15:44:49,253 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 15:44:49,253 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 15:44:49,253 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 15:49:42,129 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8110@DEFAULT@DEFAULT_GROUP@@service-produce, region: unknown, msg: client timeout after 15000, last beat: 1629359362276
+
+2021-08-19 15:49:44,313 INFO {POS} {IP-DISABLED} valid: 192.168.30.1:8120@DEFAULT@DEFAULT_GROUP@@service-consumers, region: unknown, msg: client timeout after 15000, last beat: 1629359364442
+
+2021-08-19 15:49:57,226 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-08-19 15:49:57,226 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 15:49:59,318 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-08-19 15:49:59,318 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-08-19 15:50:11,995 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 15:50:11,996 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 15:50:11,999 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.30.1:8110_true,
+
+2021-08-19 15:50:18,522 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 15:50:18,522 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 15:50:18,524 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.30.1:8120_true,
+
+2021-08-19 15:52:59,238 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 15:52:59,238 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-08-19 15:52:59,328 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.30.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-08-19 15:52:59,328 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+

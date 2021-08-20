@@ -21,4 +21,10 @@ public class ProduceServiceFallBack implements ProduceService {
         log.error("熔断保护");
         return R.error();
     }
+
+    @Override
+    public R updateById(String id) {
+        log.error("熔断保护");
+        return R.error();
+    }
 }
