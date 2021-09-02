@@ -11,13 +11,17 @@ import com.cloud.service.feign.ProduceService;
 import com.cloud.service.result.R;
 import com.cloud.service.service.UcenterMemberService;
 import com.cloud.service.util.RandomUtils;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 /**
  * <p>
@@ -54,7 +58,17 @@ public class UcenterMemberController {
     @ApiOperation(value = "RestTemplate服务消费者")
     @GetMapping("serviceConsumersByRestTemplate")
     public R serviceConsumersByRestTemplate() {
-        R r = restTemplate.getForObject(restUrl, R.class);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.set("JF_RN", UUID.fastUUID().toString().replaceAll("-", ""));
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
+        ResponseEntity<String> exchange = restTemplate.exchange(restUrl, HttpMethod.GET, entity, String.class);
+        List<String> jfSn = exchange.getHeaders().get("res");
+        String res = exchange.getHeaders().getFirst("res");
+        System.out.println("res:" + res);
+        R r = new R();
+        //R r = restTemplate.getForObject(restUrl, R.class);
+        //System.out.println("---------------------------------数据结果:" + r.getData());
         return R.ok().data("list", r);
     }
 
@@ -75,21 +89,21 @@ public class UcenterMemberController {
 
     @ApiOperation(value = "添加数据")
     @PostMapping("add")
-    public R add() {
-        UcenterMember ucenterMember = new UcenterMember().setOpenid(RandomUtils.getFourBitRandom()).setMobile(RandomUtils.getFourBitRandom()).setNickname(RandomUtils.getFourBitRandom()).setSex(1);
-        return R.ok().data("code", ucenterMemberService.save(ucenterMember));
+    @GlobalTransactional(rollbackFor = Exception.class)
+    public R add() throws Exception {
+        Boolean save = ucenterMemberService.UcenterAdd();
+        return R.ok().data("code", save);
     }
 
     @ApiOperation(value = "修改数据")
     @PostMapping("updateById")
-    public R updateById(@ApiParam(value = "个人id", required = true) @RequestParam String id){
+    public R updateById(@ApiParam(value = "个人id", required = true) @RequestParam String id) {
         UcenterMember ucenterMember = ucenterMemberService.getById(id);
         ucenterMember.setId(id);
         ucenterMember.setNickname(RandomUtils.getSixBitRandom());
         R r = restTemplate.getForObject(restUrl, R.class);
         produceService.updateById("1426565602478309378");
         ucenterMemberService.updateById(ucenterMember);
-            int i =1/0;
         return R.ok().data("code", "success");
     }
 
