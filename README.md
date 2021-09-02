@@ -10,16 +10,20 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 
 springboot
 springcloud alibaba
+nacos
+seata
+mybatis-plus
 
+#### 第一次上传项目
+1、 进入到本地需要往gitee上传的文件夹，右键点击选择git bash here。注意：如果此文件夹里有.get文件，请删除！
+2、输入命令 git init (为了给上传的文件夹添加.get 文件）
+3、输入命令 git remote add origin https://…get (后面的链接为gitee上的[克隆/下载] 的地址,为了给本地文件夹和gitee建立连接，记得替换，不要直接抄)
+4、输入命令git add . (注意命令后面有个“.”。将本地文件夹加入本地库)
+5、输入命令 git commit -m"xxx" (提交到本地库,"XXX"为提交备注或说明）
+6、 输入命令 git push origin master ，成功后可在gitee上查看)。(补充一个强制提交代码到gitee上的命令git push -u origin master -f，能用git push origin master就不要用强制上传命令）
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 更新项目
+1.输入命令git pull （先获取gitee上别人上传的代码）
+2.输入命令git add . (注意命令后面有个“.”。将本地文件夹加入本地库)
+3.输入命令 git commit -m"xxx" (提交到本地库,"XXX"为提交备注或说明）
+4.输入命令 git push origin master ，成功后可在gitee上查看，未成功很有可能是你没有在第一步输入命令git pull获取代码,导致代码冲突。(补充一个强制提交代码到gitee上的命令git push -u origin master -f，能用git push origin master就不要用强制上传命令）
