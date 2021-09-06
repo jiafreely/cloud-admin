@@ -35,3 +35,16 @@ mybatis-plus
 1. https://www.51mimu.com/html/news/1941.html
 2. https://blog.csdn.net/qq_44732146/article/details/118469470?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-4.control&spm=1001.2101.3001.4242
 3. https://blog.csdn.net/han949417140/article/details/116161114?ivk_sa=1024320u
+
+
+
+1. feat - 新功能 feature
+1. fix - 修复 bug
+1. docs - 文档注释
+1. style - 代码格式(不影响代码运行的变动)
+1. refactor - 重构、优化(既不增加新功能，也不是修复bug)
+1. perf - 性能优化
+1. test - 增加测试
+1. chore - 构建过程或辅助工具的变动
+1. revert - 回退
+1. build - 打包
