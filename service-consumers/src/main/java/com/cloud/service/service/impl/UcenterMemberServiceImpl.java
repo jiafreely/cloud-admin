@@ -1,9 +1,13 @@
 package com.cloud.service.service.impl;
 
-import com.cloud.service.entity.UcenterMember;
-import com.cloud.service.mapper.UcenterMemberMapper;
-import com.cloud.service.service.UcenterMemberService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.cloud.service.entity.UcenterMember;
+import com.cloud.service.feign.ProduceService;
+import com.cloud.service.mapper.UcenterMemberMapper;
+import com.cloud.service.result.R;
+import com.cloud.service.service.UcenterMemberService;
+import com.cloud.service.util.RandomUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +21,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, UcenterMember> implements UcenterMemberService {
 
+    @Autowired
+    private ProduceService produceService;
+
+    @Override
+    public Boolean UcenterAdd() {
+        UcenterMember ucenterMember = new UcenterMember().setOpenid(RandomUtils.getFourBitRandom()).setMobile(RandomUtils.getFourBitRandom()).setNickname(RandomUtils.getFourBitRandom()).setSex(1);
+        boolean save = this.save(ucenterMember);
+        R add = produceService.add();
+        return save;
+    }
 }

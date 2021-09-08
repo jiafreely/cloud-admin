@@ -63,15 +63,18 @@ public class TeacherController extends HttpServletContextAware {
      */
     @ApiOperation(value = "RestTemplate服务提供者")
     @GetMapping("serviceProviderByRestTemplate")
-    public R serviceProviderByRestTemplate() {
+    public R serviceProviderByRestTemplate() throws Exception {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = requestAttributes.getRequest();
         HttpServletResponse response = requestAttributes.getResponse();
         String jf_sys = request.getHeader("SYS");
-        log.info("restTempalte服务调用:{}",jf_sys);
-        String sid =  UUID.fastUUID().toString().replaceAll("-","");
-        response.addHeader("JF_SN", sid);
-        return R.ok().data("teacherList", teacherService.list());
+        String rid = request.getHeader("JF_RN");
+        log.info("restTempalte服务调用:{}", jf_sys);
+        String sid = UUID.fastUUID().toString().replaceAll("-", "");
+        //response.addHeader("res", sid);
+        System.out.println("res:" + sid);
+        //teacherService.list()
+        return R.ok().data("teacherList", "");
     }
 
 
@@ -103,21 +106,26 @@ public class TeacherController extends HttpServletContextAware {
         return R.ok().data("code", teacherService.removeById(id));
     }
 
+
     @ApiOperation(value = "添加数据")
     @PostMapping("add")
     public R add() {
+        log.info("添加请求进来了");
         Teacher teacher = new Teacher().setName(RandomUtils.getFourBitRandom()).setIntro(RandomUtils.getFourBitRandom()).setCareer(RandomUtils.getFourBitRandom()).setLevel(1);
-        return R.ok().data("code", teacherService.save(teacher));
+        boolean save = teacherService.save(teacher);
+        return R.ok().data("code", save);
     }
+
 
     @ApiOperation(value = "修改数据")
     @PostMapping("updateById")
     public R updateById(@ApiParam(value = "教师id", required = true) @RequestParam String id) {
-        System.out.println("接收数据:{}"+id);
+        System.out.println("接收数据:{}" + id);
         Teacher teacher = teacherService.getById(id);
         teacher.setId(id);
         teacher.setName(RandomUtils.getSixBitRandom());
-        return R.ok().data("code", teacherService.updateById(teacher));
+        boolean b = teacherService.updateById(teacher);
+        return R.ok().data("code", b);
     }
 }
 

@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-08-17
  */
 public interface UcenterMemberService extends IService<UcenterMember> {
-
+ public Boolean UcenterAdd();
 }

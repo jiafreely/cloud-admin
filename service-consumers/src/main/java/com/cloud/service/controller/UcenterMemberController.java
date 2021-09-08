@@ -11,7 +11,6 @@ import com.cloud.service.feign.ProduceService;
 import com.cloud.service.result.R;
 import com.cloud.service.service.UcenterMemberService;
 import com.cloud.service.util.RandomUtils;
-import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -89,9 +88,12 @@ public class UcenterMemberController {
 
     @ApiOperation(value = "添加数据")
     @PostMapping("add")
-    @GlobalTransactional(rollbackFor = Exception.class)
+    //@GlobalTransactional(rollbackFor = Exception.class)
     public R add() throws Exception {
         Boolean save = ucenterMemberService.UcenterAdd();
+        if (1 == 1) {
+            throw new Exception("制造异常");
+        }
         return R.ok().data("code", save);
     }
 
@@ -106,6 +108,5 @@ public class UcenterMemberController {
         ucenterMemberService.updateById(ucenterMember);
         return R.ok().data("code", "success");
     }
-
 }
 

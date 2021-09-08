@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @version 1.0
  * @ClassName: GlobalExceptionHandler
  * @description: 全局异常处理
+ * 使用seata时需要将全局捕获注释,否则seata认为你已经捕获了异常不会在进行数据回滚了
  * @date 2021/6/17 15:41
  */
 @Slf4j

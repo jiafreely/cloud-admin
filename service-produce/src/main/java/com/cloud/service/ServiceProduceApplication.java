@@ -23,10 +23,8 @@ import java.net.UnknownHostException;
 @Slf4j
 @EnableSwagger2
 @EnableFeignClients
-@SpringBootApplication
-//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-//@Import({DataSourceProxyAutoConfiguration.class})
 @EnableDiscoveryClient
+@SpringBootApplication
 public class ServiceProduceApplication {
     public static void main(String[] args) throws UnknownHostException {
         ConfigurableApplicationContext context = SpringApplication.run(ServiceProduceApplication.class, args);
