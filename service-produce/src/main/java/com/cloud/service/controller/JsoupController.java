@@ -3,6 +3,7 @@ package com.cloud.service.controller;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cloud.service.DTO.JsoupKDTO;
@@ -17,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 
@@ -39,12 +41,15 @@ public class JsoupController {
 
     private static final String XIAOD="小刀娱乐网";
 
+    private static final String LIUM="流氓资源馆";
+
     @Autowired
     private XiaoKService xiaoKService;
 
     @ApiOperation(value = "聚合爬取当天数据")
     @PostMapping("addJsoup")
     public R addJsoup() {
+
         log.info("---------------------开始爬取小k娱乐网的内容");
         List<JsoupKDTO> jsoupKDTOList = JsoupUtil.jsoupXk();
         if (jsoupKDTOList != null && jsoupKDTOList.size() > 0) {
@@ -65,7 +70,17 @@ public class JsoupController {
         }
         log.info("---------------------爬取小刀娱乐网的内容爬取完毕,共爬取{}条内容", jsoupDDTOList.size());
 
-        return R.ok().message("爬取小k娱乐网的内容爬取完毕,共爬取"+jsoupKDTOList.size()+"条内容,爬取小刀娱乐网的内容爬取完毕,共爬取"+jsoupDDTOList.size()+"条内容");
+        log.info("---------------------开始爬取流氓资源网的内容");
+        List<JsoupKDTO> jsoupMDTOList = JsoupUtil.jsoupLm();
+        if (jsoupMDTOList != null && jsoupMDTOList.size() > 0) {
+            jsoupMDTOList.forEach(jsoupMDTO -> {
+                JsoupInfo jsoupInfo = new JsoupInfo().setTitleInfo(LIUM).setTitleName(jsoupMDTO.getTitleName()).setUrl(jsoupMDTO.getUrl()).setArticleTime(jsoupMDTO.getArticleTime());
+                xiaoKService.save(jsoupInfo);
+            });
+        }
+        log.info("---------------------爬取流氓资源网的内容爬取完毕,共爬取{}条内容", jsoupMDTOList.size());
+
+        return R.ok().message("爬取小k娱乐网的内容爬取完毕,共爬取"+jsoupKDTOList.size()+"条内容,爬取小刀娱乐网的内容爬取完毕,共爬取"+jsoupDDTOList.size()+"条内容,爬取流氓资源网的内容爬取完毕,共爬取"+jsoupMDTOList.size()+"条内容");
     }
 
     @ApiOperation(value = "爬取查询内容")
@@ -96,5 +111,14 @@ public class JsoupController {
         Page<JsoupInfo> page = new Page<>(pageNo, pageSize);
         IPage<JsoupInfo> teacherIPage =xiaoKService.page(page);
         return R.ok().data("list",teacherIPage.getRecords());
+    }
+
+    @ApiOperation(value = "查询今天的数据")
+    @GetMapping("showToDayList")
+    public R showToDayList(){
+        LambdaQueryWrapper<JsoupInfo> lambdaQueryWrapper =new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(JsoupInfo::getArticleTime, LocalDate.now());
+        List<JsoupInfo> Datelist = xiaoKService.list(lambdaQueryWrapper);
+        return R.ok().data("list",Datelist);
     }
 }

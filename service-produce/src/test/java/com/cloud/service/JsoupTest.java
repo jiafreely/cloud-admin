@@ -92,16 +92,26 @@ public class JsoupTest {
         }
     }
 
-    //public static void main(String[] args) throws IOException {
-    //    Document document = Jsoup.parse(new URL("http://www.z-sms.com/"), 5000);
-    //
-    //    //Selector选择器组合使用
-    //    Elements elements = document.select("[class=btnCopy]");
-    //    for (Element element : elements) {
-    //        String elphone = element.text();
-    //        //19815151534
-    //        String phone = elphone.substring(0, elphone.length() - 2);
-    //        System.out.println(phone);
-    //    }
-    //}
+/*    public static void main(String[] args) throws IOException {
+        Document document = Jsoup.parse(new URL("https://www.qqlmg.com/"), 5000);
+
+        //Selector选择器组合使用
+        Elements elements = document.select("[class=column half font]");
+        for (Element element : elements) {
+            Elements span = element.children().select("span");
+            String time = span.text();
+            String substringTime = time.substring(time.indexOf("-") + 1, time.length());
+
+            Elements a = element.children().select("a");
+            String url = a.attr("href");
+
+            String titleName = a.text();
+            java.time.LocalDate jsouplocalDate = java.time.LocalDate.now().withDayOfMonth(Integer.valueOf(substringTime));
+            java.time.LocalDate localDate = java.time.LocalDate.now();
+            //爬取今天的内容信息
+            if (localDate.toString().equals(jsouplocalDate.toString())) {
+                System.out.println(titleName+"\t"+"https://www.qqlmg.com/"+url+"\t"+time);
+            }
+        }
+    }*/
 }
