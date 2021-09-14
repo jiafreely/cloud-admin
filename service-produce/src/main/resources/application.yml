@@ -66,3 +66,8 @@ ribbon:
 feign:
   sentinel:
     enabled: true
+
+elasticsearch:
+  esUrl: 127.0.0.1:9200
+#  host: 127.0.0.1
+#  port: 9200

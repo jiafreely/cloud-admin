@@ -2,6 +2,7 @@ package com.cloud.service.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.Version;
 import com.cloud.service.model.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,12 +30,33 @@ public class JsoupInfo extends BaseEntity {
     @ApiModelProperty(value = "网站信息")
     @TableField("title_info")
     private String titleInfo;
+
     @ApiModelProperty(value = "文章名称")
     @TableField("title_name")
     private String titleName;
+
     @ApiModelProperty(value = "文章地址")
     private String url;
+
     @ApiModelProperty(value = "文章上传时间")
-    @TableField("article_time")
+    @TableField(value = "article_time")
     private LocalDate articleTime;
+
+    @ApiModelProperty(value = "版本")
+    @Version
+    private Integer version;
+
+    @Override
+    public String toString() {
+        return "JsoupInfo{" +
+                "id='" + this.getId() + '\'' +
+                ", titleInfo='" + titleInfo + '\'' +
+                ", titleName='" + titleName + '\'' +
+                ", url='" + url + '\'' +
+                ", articleTime=" + articleTime +
+                ", version=" + version +
+                ", gmtCreate=" + this.getGmtCreate() +
+                ", gmtModified=" + this.getGmtModified() +
+                '}';
+    }
 }

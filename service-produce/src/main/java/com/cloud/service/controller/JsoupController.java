@@ -3,6 +3,8 @@ package com.cloud.service.controller;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cloud.service.DTO.JsoupKDTO;
 import com.cloud.service.entity.JsoupInfo;
 import com.cloud.service.jsoup.JsoupUtil;
@@ -87,4 +89,12 @@ public class JsoupController {
         return R.ok().data("success",list);
     }
 
+    @ApiOperation(value = "分页查询数据")
+    @GetMapping("showPageList")
+    public R showPageList(@ApiParam(value = "页码",required = true,defaultValue = "1") @RequestParam(value = "pageNo") long pageNo,
+                          @ApiParam(value = "条数",required = true,defaultValue = "5") @RequestParam(value = "pageSize") long pageSize){
+        Page<JsoupInfo> page = new Page<>(pageNo, pageSize);
+        IPage<JsoupInfo> teacherIPage =xiaoKService.page(page);
+        return R.ok().data("list",teacherIPage.getRecords());
+    }
 }
