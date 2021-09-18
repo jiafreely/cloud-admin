@@ -68,3 +68,11 @@ ribbon:
 feign:
   sentinel:
     enabled: true
+
+# 自定义的线程池的配置
+thread:
+  corePoolSize: 50
+  maxPoolSize: 200
+  queueCapacity: 1000
+  keepAliveSeconds: 300
+  threadNamePrefix: service-consumers Thread-
