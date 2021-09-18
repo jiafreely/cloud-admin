@@ -81,7 +81,12 @@ public class TeacherController extends HttpServletContextAware {
     @ApiOperation(value = "查询全部教师")
     @GetMapping("queryAllList")
     public R queryAllList() {
-        return R.ok().data("list", teacherService.list());
+        try {
+            return R.ok().data("list", teacherService.list());
+        } catch (Exception e) {
+            log.info(e.getMessage());
+            return R.error().message(e.getMessage());
+        }
     }
 
     @ApiOperation(value = "根据id删除讲师")
