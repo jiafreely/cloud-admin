@@ -31,7 +31,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
+        <!-- AOP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
         <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -71,21 +75,21 @@
         </dependency>
 
         <!-- seata-->
-<!--        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
-            <exclusions>
-                <exclusion>
+        <!--        <dependency>
+                    <groupId>com.alibaba.cloud</groupId>
+                    <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>io.seata</groupId>
+                            <artifactId>seata-spring-boot-starter</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+                <dependency>
                     <groupId>io.seata</groupId>
                     <artifactId>seata-spring-boot-starter</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>io.seata</groupId>
-            <artifactId>seata-spring-boot-starter</artifactId>
-            <version>1.4.0</version>
-        </dependency>-->
+                    <version>1.4.0</version>
+                </dependency>-->
 
         <!--配置中心-->
         <!--        <dependency>-->
@@ -191,12 +195,16 @@
             <artifactId>jsoup</artifactId>
             <version>1.10.3</version>
         </dependency>
-
+        <!-- 阿里JSON解析器 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
         <!--引入es的坐标-->
-<!--        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                </dependency>-->
 
 
         <dependency>
