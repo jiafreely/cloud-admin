@@ -3,8 +3,8 @@ server:
   tomcat:
     max-threads: 200 #tomcat的最大并发值修改为10,默认是200
 spring:
-#  profiles:
-#    active: dev # 环境设置
+  #  profiles:
+  #    active: dev # 环境设置
   application:
     name: service-produce # 服务名
   datasource: # mysql数据库连接
@@ -12,15 +12,28 @@ spring:
     url: jdbc:mysql://localhost:3306/service_produce?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: admin
     password: admin
-#spring:
+    # rabbitmq配置信息
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    #消息确认配置项
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirm-type: correlated
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
+    virtual-host: /
+
+  #spring:
   jackson: #返回json的全局时间格式,默认情况下json时间格式带有时区，并且是世界标准时间，和我们的时间差了八个小时
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
   #spring:
   cloud:
-#    alibaba:
-#      seata:
-#        tx-service-group: my_test_tx_group
+    #    alibaba:
+    #      seata:
+    #        tx-service-group: my_test_tx_group
     nacos:
       discovery:
         server-addr: localhost:8848 # nacos服务地址

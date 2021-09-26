@@ -18,7 +18,7 @@ import java.util.Collections;
  * @description: TODO
  * @date 2021/8/18 14:15
  */
-@Configuration
+@Configuration(proxyBeanMethods = false)
 public class RestTemplateConfig {
     @Bean
     public RestTemplate restTemplate() {

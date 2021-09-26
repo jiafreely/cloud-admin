@@ -12,7 +12,22 @@ spring:
     url: jdbc:mysql://localhost:3306/service_consumers?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: admin
     password: admin
-#spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      # 消息开启手动确认
+#      direct:
+#        acknowledge-mode: manual
+      simple:
+        retry:
+          # 开启重试
+          enabled: true
+          # 重试次数,默认为3次
+          max-attempts: 5
+  #spring:
   jackson: #返回json的全局时间格式,默认情况下json时间格式带有时区，并且是世界标准时间，和我们的时间差了八个小时
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8

@@ -28,7 +28,7 @@ import java.time.Duration;
  * 否则redis自动使用对象的jdk序列化
  */
 @EnableCaching
-@Configuration
+@Configuration(proxyBeanMethods = false)
 public class RedisConfig {
     @Bean
     public RedisTemplate<String, Serializable> redisTemplate(LettuceConnectionFactory connectionFactory) {

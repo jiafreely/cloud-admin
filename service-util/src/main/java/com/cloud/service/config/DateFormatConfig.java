@@ -24,7 +24,7 @@ import java.time.format.DateTimeFormatter;
  * @description: TODO
  * @date 2021/9/14 9:01
  */
-@Configuration
+@Configuration(proxyBeanMethods = false)
 public class DateFormatConfig {
     private static final String DEFAULT_DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
     private static final String DEFAULT_DATE_PATTERN = "yyyy-MM-dd";

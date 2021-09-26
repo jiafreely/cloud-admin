@@ -20,7 +20,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  */
 
 @Data
-@Configuration
+@Configuration(proxyBeanMethods = false)
 @ConfigurationProperties(prefix = "thread") //自定义标识前缀
 public class ThreadPoolConfig {
     // 核心线程池大小 如果池中的实际线程数小于corePoolSize,无论是否其中有空闲的线程，都会给新的任务产生新的线程

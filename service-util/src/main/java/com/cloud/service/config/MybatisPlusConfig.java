@@ -13,12 +13,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author xjh
  * @version 1.0
  * @ClassName: MybatisPlusConfig
- * @description: TODO
+ * @description: url https://blog.csdn.net/qq_44855188/article/details/113193875
  * @date 2021/6/17 11:10
  */
 
 @EnableTransactionManagement
-@Configuration
+//配置 类组件之间无依赖关系用Lite模式加速容器启动过程，减少判断
+@Configuration(proxyBeanMethods = false)
 @MapperScan("com.cloud.service.mapper")
 public class MybatisPlusConfig {
     @Bean
