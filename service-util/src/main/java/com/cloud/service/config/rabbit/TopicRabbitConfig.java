@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
  * @version 1.0
  * @ClassName: TopicRabbitConfig
  * @description: Topic Exchange 主题交换机
+ * 通配符说明：
+ * 符号"#"：匹配一个或者多个词lazy.# 可以匹配lazy.irs或者lazy.irs.cor
+ * 符号"*"：只能匹配一个词lazy.* 可以匹配lazy.irs或者lazy.cor
  * @date 2021/9/24 9:36
  */
 @Configuration(proxyBeanMethods = false)

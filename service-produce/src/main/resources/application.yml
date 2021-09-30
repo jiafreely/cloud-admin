@@ -24,6 +24,7 @@ spring:
     #确认消息已发送到队列(Queue)
     publisher-returns: true
     virtual-host: /
+    connection-timeout: 20000
 
   #spring:
   jackson: #返回json的全局时间格式,默认情况下json时间格式带有时区，并且是世界标准时间，和我们的时间差了八个小时

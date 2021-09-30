@@ -1,9 +1,6 @@
 package com.cloud.service.config.rabbit;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,6 +14,9 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class DirectRabbitConfig {
+    //队列过期时间
+    private int testDirectQueueTTL = 5000;
+
     //队列 起名：TestDirectQueue
     @Bean
     public Queue TestDirectQueue() {
@@ -26,7 +26,13 @@ public class DirectRabbitConfig {
         //   return new Queue("TestDirectQueue",true,true,false);
 
         //一般设置一下队列的持久化就好,其余两个就是默认false
-        return new Queue("TestDirectQueue", true);
+        //return new Queue("TestDirectQueue", true);
+
+        return QueueBuilder.durable("TestDirectQueue")
+                .ttl(testDirectQueueTTL)
+                .deadLetterRoutingKey("dead_route_key")//设置死信队列的RouteKey
+                .deadLetterExchange("dead_exchange")//设置死信队列的Exchange
+                .build();
     }
 
     //Direct交换机 起名：TestDirectExchange

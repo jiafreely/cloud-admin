@@ -5,6 +5,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +39,7 @@ public class SendMessageController {
     public String sendDirectMessage(@ApiParam(value = "发送消息数", required = true) @RequestParam("number") Integer number) {
         for (int i = 1; i <= number; i++) {
             String messageId = String.valueOf(UUID.randomUUID());
-            String messageData =  Integer.toString(i);
+            String messageData = Integer.toString(i);
             String createTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
             Map<String, Object> map = new HashMap<>();
             map.put("messageId", messageId);
@@ -95,8 +97,7 @@ public class SendMessageController {
     }
 
     /**
-     * @description:
-     * 消息确认队列
+     * @description: 消息确认队列
      * @return: java.lang.String
      * @author: xjh
      * @date: 2021/9/26 16:09
@@ -112,6 +113,29 @@ public class SendMessageController {
             map.put("messageData", messageData);
             map.put("createTime", createTime);
             rabbitTemplate.convertAndSend("confirm_queue", map, new CorrelationData("" + System.currentTimeMillis()));
+        }
+        return "ok";
+    }
+
+
+    /**
+     * @description: 首部交换机队列
+     * @return: java.lang.String
+     * @author: xjh
+     * @date: 2021/9/26 16:09
+     */
+    @PostMapping("/sendHeadersMessage")
+    public String sendHeadersMessage() {
+        for (int i = 1; i <= 2; i++) {
+            String messageId = String.valueOf(UUID.randomUUID());
+            //配置消息规则
+            MessageProperties messageProperties = new MessageProperties();
+            messageProperties.setHeader("headers1", "value1");
+            messageProperties.setHeader("headers2", "value2");
+            String result = "我是首部交换机第" + i + "条队列";
+            //要发送的消息，第一个参数为具体的消息字节数组，第二个参数为消息规则
+            Message msg = new Message(result.getBytes(), messageProperties);
+            rabbitTemplate.convertAndSend("HEADERS_EXCHANGE","", msg);
         }
         return "ok";
     }
