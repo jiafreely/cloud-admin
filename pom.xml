@@ -7,6 +7,7 @@
         <module>service-produce</module>
         <module>service-util</module>
         <module>service-consumers</module>
+        <module>service-gateway</module>
     </modules>
 
     <parent>
@@ -43,6 +44,7 @@
         <apache.xmlbeans.version>3.1.0</apache.xmlbeans.version>
         <hutool.version>5.4.7</hutool.version>
         <fastjson.version>1.2.76</fastjson.version>
+        <rocketmq.version>2.1.1</rocketmq.version>
 <!--        <elasticsearch.version>7.13.4</elasticsearch.version>-->
     </properties>
 
@@ -177,6 +179,12 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+            <!--rocketmq-->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

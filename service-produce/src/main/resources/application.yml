@@ -88,3 +88,17 @@ thread:
   queueCapacity: 1000
   keepAliveSeconds: 300
   threadNamePrefix: service-produce Thread-
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    #自定义的组名称
+    group: rocketmq-queue
+    # mq的nameserver地址
+#    namesrvAddr: 127.0.0.1:9876
+    # 消息最大长度 默认 1024 * 4 (4M)
+    maxMessageSize: 4096
+    # 发送消息超时时间，默认 3000
+    sendMsgTimeOut: 3000
+    # 发送消息失败重试次数，默认2
+    retryTimesWhenSendFailed: 2

@@ -3,6 +3,9 @@ server:
   tomcat:
     max-threads: 200 #tomcat的最大并发值修改为10,默认是200
 spring:
+  main:
+    #在多个接口上定义@FeignClient(name = 相同的名字)，有相同名字的Feign注册会导致重复注册
+    allow-bean-definition-overriding: true
   #  profiles:
   #    active: dev # 环境设置
   application:
@@ -99,3 +102,9 @@ thread:
   queueCapacity: 1000
   keepAliveSeconds: 300
   threadNamePrefix: service-consumers Thread-
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    #自定义的组名称
+    group: rocketmq-queue

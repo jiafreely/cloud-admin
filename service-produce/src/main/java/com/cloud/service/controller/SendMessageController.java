@@ -135,7 +135,7 @@ public class SendMessageController {
             String result = "我是首部交换机第" + i + "条队列";
             //要发送的消息，第一个参数为具体的消息字节数组，第二个参数为消息规则
             Message msg = new Message(result.getBytes(), messageProperties);
-            rabbitTemplate.convertAndSend("HEADERS_EXCHANGE","", msg);
+            rabbitTemplate.convertAndSend("HEADERS_EXCHANGE", "", msg);
         }
         return "ok";
     }
