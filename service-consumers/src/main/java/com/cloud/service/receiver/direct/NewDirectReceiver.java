@@ -42,7 +42,7 @@ public class NewDirectReceiver {
             // 直至消息发送至完好的消费者一时，才会把消息消费掉,前提是没有设置死信队列
 
             //如果设置了死信队则会将丢失的消息传到死信队列中进行处理,不会进行重试
-            if (testMessage.get("messageData").equals("8")) {
+            if ("8".equals(testMessage.get("messageData"))) {
                 System.out.println("messageData == 8");
                 ////消息的标志,是否批量处理,是否重入队列
                 channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, true);

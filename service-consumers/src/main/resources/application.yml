@@ -103,8 +103,8 @@ thread:
   keepAliveSeconds: 300
   threadNamePrefix: service-consumers Thread-
 
-rocketmq:
-  name-server: 127.0.0.1:9876
-  producer:
-    #自定义的组名称
-    group: rocketmq-queue
+#rocketmq:
+#  name-server: 127.0.0.1:9876
+#  producer:
+#    #自定义的组名称
+#    group: rocketmq-queue

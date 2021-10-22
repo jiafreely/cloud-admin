@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@Api(description = "聚合爬取")
+@Api(description = "聚合爬取",tags = "聚合爬取")
 @RequestMapping("/admin/consumers/crawling")
 public class CrawlingController {
 
