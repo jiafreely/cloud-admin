@@ -31,7 +31,7 @@ public class QRCodeGenerator {
 
     public static void main(String[] args) {
         try {
-            generateQRCodeImage("http://10.111.26.200:8120//admin/consumers/alipay/transcation", 350, 350, QR_CODE_IMAGE_PATH);
+            generateQRCodeImage("http://10.111.26.200:8120//admin/consumers/alipay/payPhone", 350, 350, QR_CODE_IMAGE_PATH);
         } catch (WriterException e) {
             System.out.println("Could not generate QR Code, WriterException :: " + e.getMessage());
         } catch (IOException e) {
