@@ -46,12 +46,76 @@ public class TeacherController extends HttpServletContextAware {
      * @author: xjh
      * @date: 2021/8/18 11:00
      */
-    @ApiOperation(value = "Http服务提供者")
-    @GetMapping("serviceProviderByHttp")
-    public R serviceProviderByHttp() {
+    @ApiOperation(value = "GetHttp服务提供者")
+    @GetMapping("serviceProvider/{id}/ByHttpGet")
+    public R serviceProviderByHttpGet(@PathVariable String id,String key1,String key2) {
         HttpServletRequest request = getRequest();
         log.info("Http服务调用:" + request.getHeader("JF_UR"));
-        return R.ok().data("teacherList", teacherService.list());
+        log.info("Http服务调用:" + id);
+        log.info("Http服务调用:" + key1);
+        log.info("Http服务调用:" + key2);
+        log.info("Http服务调用:" + request.getHeader("X-Tenant-ID"));
+        log.info("Http服务调用:" + request.getHeader("X-Request-ID"));
+        return R.ok().message("success");
+    }
+
+    /**
+     * @description: TODO
+     * http请求获取
+     * @return: com.cloud.service.result.R
+     * @author: xjh
+     * @date: 2021/8/18 11:00
+     */
+    @ApiOperation(value = "PostHttp服务提供者")
+    @PostMapping("serviceProviderByHttpPost")
+    public R serviceProviderByHttpPost(@RequestParam String key1, @RequestParam String key2) {
+        HttpServletRequest request = getRequest();
+        log.info("Http服务调用:" + request.getHeader("JF_UR"));
+        log.info("Http服务调用:" + key1);
+        log.info("Http服务调用:" + key2);
+        log.info("Http服务调用:" + request.getHeader("X-Tenant-ID"));
+        log.info("Http服务调用:" + request.getHeader("X-Request-ID"));
+        return R.ok().message("success");
+    }
+
+    /**
+     * @description: TODO
+     * http请求获取
+     * @return: com.cloud.service.result.R
+     * @author: xjh
+     * @date: 2021/8/18 11:00
+     */
+    @ApiOperation(value = "PutHttp服务提供者")
+    @PutMapping("serviceProvider/{id}/ByHttpPut")
+    public R serviceProviderByHttpPut(@PathVariable String id,String key1,String key2) {
+        HttpServletRequest request = getRequest();
+        log.info("Http服务调用:" + request.getHeader("JF_UR"));
+        log.info("Http服务调用:" + id);
+        log.info("Http服务调用:" + key1);
+        log.info("Http服务调用:" + key2);
+        log.info("Http服务调用:" + request.getHeader("X-Tenant-ID"));
+        log.info("Http服务调用:" + request.getHeader("X-Request-ID"));
+        return R.ok().message("success");
+    }
+
+    /**
+     * @description: TODO
+     * http请求获取
+     * @return: com.cloud.service.result.R
+     * @author: xjh
+     * @date: 2021/8/18 11:00
+     */
+    @ApiOperation(value = "DeleteHttp服务提供者")
+    @DeleteMapping("serviceProvider/{id}/ByHttpDelete")
+    public R serviceProviderByHttpDelete(@PathVariable String id,String key1,String key2) {
+        HttpServletRequest request = getRequest();
+        log.info("Http服务调用:" + request.getHeader("JF_UR"));
+        log.info("Http服务调用:" + id);
+        log.info("Http服务调用:" + key1);
+        log.info("Http服务调用:" + key2);
+        log.info("Http服务调用:" + request.getHeader("X-Tenant-ID"));
+        log.info("Http服务调用:" + request.getHeader("X-Request-ID"));
+        return R.ok().message("success");
     }
 
     /**
