@@ -58,15 +58,15 @@ public class UcenterMemberController {
         //stringObjectMap.put("id", "123123123");
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("key1", "value1");
-        jsonObject.put("key2", "value2");
+        jsonObject.put("key3", "value3");
+        jsonObject.put("key4", "value4");
         //jsonObject.put("id", "123123123");
 
         HttpResponse response = HttpRequest.get(url)
                 .header("X-Tenant-ID", "tenantId123")
                 .header("X-Request-ID", "Request-ID123")
                 .form(stringObjectMap)
-                //.body(jsonObject.toJSONString())
+                .body(jsonObject.toJSONString())
                 .execute();
 
         return R.ok().data("list", response.body());

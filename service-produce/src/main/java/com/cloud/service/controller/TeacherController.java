@@ -5,6 +5,7 @@ import cn.hutool.core.lang.UUID;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cloud.service.config.HttpServletContextAware;
+import com.cloud.service.entity.ServiceProviderByHttpDTO;
 import com.cloud.service.entity.Teacher;
 import com.cloud.service.result.R;
 import com.cloud.service.service.TeacherService;
@@ -20,6 +21,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -48,12 +51,12 @@ public class TeacherController extends HttpServletContextAware {
      */
     @ApiOperation(value = "GetHttp服务提供者")
     @GetMapping("serviceProvider/{id}/ByHttpGet")
-    public R serviceProviderByHttpGet(@PathVariable String id,String key1,String key2) {
+    public R serviceProviderByHttpGet(@PathVariable String id, String key1, String key2) {
         HttpServletRequest request = getRequest();
         log.info("Http服务调用:" + request.getHeader("JF_UR"));
-        log.info("Http服务调用:" + id);
-        log.info("Http服务调用:" + key1);
-        log.info("Http服务调用:" + key2);
+        log.info("Http服务调用id:" + id);
+        log.info("Http服务调用:key1" + key1);
+        log.info("Http服务调用key2:" + key2);
         log.info("Http服务调用:" + request.getHeader("X-Tenant-ID"));
         log.info("Http服务调用:" + request.getHeader("X-Request-ID"));
         return R.ok().message("success");
@@ -68,14 +71,21 @@ public class TeacherController extends HttpServletContextAware {
      */
     @ApiOperation(value = "PostHttp服务提供者")
     @PostMapping("serviceProviderByHttpPost")
-    public R serviceProviderByHttpPost(@RequestParam String key1, @RequestParam String key2) {
+    public R serviceProviderByHttpPost(@RequestParam("key1") String key1,@RequestParam("key2") String key2, @RequestBody ServiceProviderByHttpDTO serviceProviderByHttpDTO
+    ) {
         HttpServletRequest request = getRequest();
         log.info("Http服务调用:" + request.getHeader("JF_UR"));
-        log.info("Http服务调用:" + key1);
-        log.info("Http服务调用:" + key2);
+        log.info("Http服务调用:key1：" + key1);
+        log.info("Http服务调用key2:" + key2);
+        log.info("Http服务调用key3:" + serviceProviderByHttpDTO.getKey3());
+        log.info("Http服务调用key4:" + serviceProviderByHttpDTO.getKey4());
         log.info("Http服务调用:" + request.getHeader("X-Tenant-ID"));
         log.info("Http服务调用:" + request.getHeader("X-Request-ID"));
-        return R.ok().message("success");
+        Map<String, Object> hashMap = new HashMap<>();
+        hashMap.put("key1", key1);
+        hashMap.put("key2", key2);
+        hashMap.put("serviceProviderByHttpDTO", serviceProviderByHttpDTO);
+        return R.ok().data(hashMap);
     }
 
     /**
@@ -87,7 +97,7 @@ public class TeacherController extends HttpServletContextAware {
      */
     @ApiOperation(value = "PutHttp服务提供者")
     @PutMapping("serviceProvider/{id}/ByHttpPut")
-    public R serviceProviderByHttpPut(@PathVariable String id,String key1,String key2) {
+    public R serviceProviderByHttpPut(@PathVariable String id, String key1, String key2) {
         HttpServletRequest request = getRequest();
         log.info("Http服务调用:" + request.getHeader("JF_UR"));
         log.info("Http服务调用:" + id);
@@ -107,7 +117,7 @@ public class TeacherController extends HttpServletContextAware {
      */
     @ApiOperation(value = "DeleteHttp服务提供者")
     @DeleteMapping("serviceProvider/{id}/ByHttpDelete")
-    public R serviceProviderByHttpDelete(@PathVariable String id,String key1,String key2) {
+    public R serviceProviderByHttpDelete(@PathVariable String id, String key1, String key2) {
         HttpServletRequest request = getRequest();
         log.info("Http服务调用:" + request.getHeader("JF_UR"));
         log.info("Http服务调用:" + id);
@@ -115,7 +125,11 @@ public class TeacherController extends HttpServletContextAware {
         log.info("Http服务调用:" + key2);
         log.info("Http服务调用:" + request.getHeader("X-Tenant-ID"));
         log.info("Http服务调用:" + request.getHeader("X-Request-ID"));
-        return R.ok().message("success");
+        Map<String, Object> hashMap = new HashMap<>();
+        hashMap.put("id", id);
+        hashMap.put("key1", key1);
+        hashMap.put("key2", key2);
+        return R.ok().data(hashMap);
     }
 
     /**
