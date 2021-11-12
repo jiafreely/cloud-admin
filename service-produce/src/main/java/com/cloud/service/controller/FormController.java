@@ -35,7 +35,6 @@ public class FormController {
             if (1 == 1) {
                 PrintWriter writer = response.getWriter();
                 writer.write("有误");
-                response.setStatus(500);
                 return;
             }
 
