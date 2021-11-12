@@ -3,6 +3,7 @@ package com.cloud.service.controller;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.alibaba.excel.EasyExcel;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -35,13 +36,13 @@ import java.util.List;
 @Api(description = "聚合爬取")
 @RequestMapping("/admin/xiaok")
 public class JsoupController {
-    private static final String XIAOK="小k娱乐网";
-    private static final String XIAOKSearch="https://www.kjsv.com/search/comprehensive.do";
+    private static final String XIAOK = "小k娱乐网";
+    private static final String XIAOKSearch = "https://www.kjsv.com/search/comprehensive.do";
 
 
-    private static final String XIAOD="小刀娱乐网";
+    private static final String XIAOD = "小刀娱乐网";
 
-    private static final String LIUM="流氓资源馆";
+    private static final String LIUM = "流氓资源馆";
 
     @Autowired
     private XiaoKService xiaoKService;
@@ -80,12 +81,12 @@ public class JsoupController {
         }
         log.info("---------------------爬取流氓资源网的内容爬取完毕,共爬取{}条内容", jsoupMDTOList.size());
 
-        return R.ok().message("爬取小k娱乐网的内容爬取完毕,共爬取"+jsoupKDTOList.size()+"条内容,爬取小刀娱乐网的内容爬取完毕,共爬取"+jsoupDDTOList.size()+"条内容,爬取流氓资源网的内容爬取完毕,共爬取"+jsoupMDTOList.size()+"条内容");
+        return R.ok().message("爬取小k娱乐网的内容爬取完毕,共爬取" + jsoupKDTOList.size() + "条内容,爬取小刀娱乐网的内容爬取完毕,共爬取" + jsoupDDTOList.size() + "条内容,爬取流氓资源网的内容爬取完毕,共爬取" + jsoupMDTOList.size() + "条内容");
     }
 
     @ApiOperation(value = "爬取查询内容")
     @GetMapping("jsoupQueryList")
-    public JSONObject jsoupQueryList(@ApiParam(value = "内容",required = true) @RequestParam(value = "keyWord") String keyWord){
+    public JSONObject jsoupQueryList(@ApiParam(value = "内容", required = true) @RequestParam(value = "keyWord") String keyWord) {
         //POST请求
         HashMap<String, Object> paramMap = new HashMap<>();
         paramMap.put("keywords", keyWord);
@@ -99,26 +100,34 @@ public class JsoupController {
 
     @ApiOperation(value = "查询全部数据")
     @GetMapping("showAllList")
-    public R showAllList(){
+    public R showAllList() {
         List<JsoupInfo> list = xiaoKService.list();
-        return R.ok().data("success",list);
+        return R.ok().data("success", list);
     }
 
     @ApiOperation(value = "分页查询数据")
     @GetMapping("showPageList")
-    public R showPageList(@ApiParam(value = "页码",required = true,defaultValue = "1") @RequestParam(value = "pageNo") long pageNo,
-                          @ApiParam(value = "条数",required = true,defaultValue = "5") @RequestParam(value = "pageSize") long pageSize){
+    public R showPageList(@ApiParam(value = "页码", required = true, defaultValue = "1") @RequestParam(value = "pageNo") long pageNo,
+                          @ApiParam(value = "条数", required = true, defaultValue = "5") @RequestParam(value = "pageSize") long pageSize) {
         Page<JsoupInfo> page = new Page<>(pageNo, pageSize);
-        IPage<JsoupInfo> teacherIPage =xiaoKService.page(page);
-        return R.ok().data("list",teacherIPage.getRecords());
+        IPage<JsoupInfo> teacherIPage = xiaoKService.page(page);
+        return R.ok().data("list", teacherIPage.getRecords());
     }
 
     @ApiOperation(value = "查询今天的数据")
     @GetMapping("showToDayList")
-    public R showToDayList(){
-        LambdaQueryWrapper<JsoupInfo> lambdaQueryWrapper =new LambdaQueryWrapper<>();
+    public R showToDayList() {
+        LambdaQueryWrapper<JsoupInfo> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(JsoupInfo::getArticleTime, LocalDate.now());
         List<JsoupInfo> Datelist = xiaoKService.list(lambdaQueryWrapper);
-        return R.ok().data("list",Datelist);
+        return R.ok().data("list", Datelist);
+    }
+
+    @ApiOperation(value = "EasyExcel读取今日的数据")
+    @PostMapping("simpleWrite")
+    public R simpleWrite() {
+        List<JsoupInfo> jsoupInfoList = xiaoKService.list();
+        EasyExcel.write("爬虫信息表" + System.currentTimeMillis() + ".xlsx", JsoupInfo.class).sheet().doWrite(jsoupInfoList);
+        return R.ok().message("读取成功");
     }
 }

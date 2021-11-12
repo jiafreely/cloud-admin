@@ -14,21 +14,22 @@ public class User implements Serializable {
     public Integer age;
 
     public User() {
-        System.out.println("无参构造函数-----------");
+
     }
 
     public User(String userName, Integer age) {
-        System.out.println("有参构造函数-----------"+userName+age);
+        System.out.println("有参构造函数-----------" + userName + age);
     }
 
-    public void getUser(){
+    public void getUser() {
         System.out.println("公共无参方法");
     }
-    public void getUser(String userName,Integer age){
-        System.out.println("公共有参方法"+userName+age);
+
+    public void getUser(String userName, Integer age) {
+        System.out.println("公共有参方法" + userName + age);
     }
 
-    private void priUser(){
+    private void priUser() {
         System.out.println("私有无参方法");
     }
 
@@ -47,4 +48,13 @@ public class User implements Serializable {
     public void setAge(Integer age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
 }
