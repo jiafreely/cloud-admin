@@ -13,6 +13,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 /**
  * @author xjh
@@ -31,7 +32,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 
         //校验/admin/consumers/crawling 下的所有url请求必须带token
         AntPathMatcher antPathMatcher = new AntPathMatcher();
-  /*      if (antPathMatcher.match("/admin/consumers/crawling/**", path)) {
+        if (antPathMatcher.match("/admin/consumers/crawling/**", path)) {
             List<String> tokenList = request.getHeaders().get("token");
 
             //没有token
@@ -46,7 +47,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
                 ServerHttpResponse response = exchange.getResponse();
                 return out(response);
             }
-        }*/
+        }
 
         //放行
         return chain.filter(exchange);

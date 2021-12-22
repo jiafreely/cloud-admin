@@ -83,7 +83,7 @@ feign:
 
 # 自定义的线程池的配置
 thread:
-  corePoolSize: 50
+  corePoolSize: 6
   maxPoolSize: 200
   queueCapacity: 1000
   keepAliveSeconds: 300

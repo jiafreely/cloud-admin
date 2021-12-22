@@ -17,11 +17,15 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Future;
 
 /**
  * @author xjh
@@ -43,45 +47,70 @@ public class JsoupController {
     private static final String XIAOD = "小刀娱乐网";
 
     private static final String LIUM = "流氓资源馆";
-
+    @Autowired
+    private ThreadPoolTaskExecutor poolTaskExecutor;
     @Autowired
     private XiaoKService xiaoKService;
+    /**
+     * countDownLatch是一个计数器，线程完成一个记录一个，计数器递减，只能只用一次
+     */
+    CountDownLatch countDownLatch = new CountDownLatch(3);
 
     @ApiOperation(value = "聚合爬取当天数据")
     @PostMapping("addJsoup")
-    public R addJsoup() {
+    public R addJsoup() throws Exception {
+        Future<Integer> submitXk = poolTaskExecutor.submit(new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                log.info("---------------------开始爬取小k娱乐网的内容");
+                List<JsoupKDTO> jsoupKDTOList = JsoupUtil.jsoupXk();
+                if (jsoupKDTOList != null && jsoupKDTOList.size() > 0) {
+                    jsoupKDTOList.forEach(jsoupKDTO -> {
+                        JsoupInfo jsoupInfo = new JsoupInfo().setTitleInfo(XIAOK).setTitleName(jsoupKDTO.getTitleName()).setUrl(jsoupKDTO.getUrl()).setArticleTime(jsoupKDTO.getArticleTime());
+                        xiaoKService.save(jsoupInfo);
+                        countDownLatch.countDown();
+                    });
+                }
+                log.info("---------------------爬取小k娱乐网的内容爬取完毕,共爬取{}条内容", jsoupKDTOList.size());
+                return jsoupKDTOList.size();
+            }
+        });
 
-        log.info("---------------------开始爬取小k娱乐网的内容");
-        List<JsoupKDTO> jsoupKDTOList = JsoupUtil.jsoupXk();
-        if (jsoupKDTOList != null && jsoupKDTOList.size() > 0) {
-            jsoupKDTOList.forEach(jsoupKDTO -> {
-                JsoupInfo jsoupInfo = new JsoupInfo().setTitleInfo(XIAOK).setTitleName(jsoupKDTO.getTitleName()).setUrl(jsoupKDTO.getUrl()).setArticleTime(jsoupKDTO.getArticleTime());
-                xiaoKService.save(jsoupInfo);
-            });
-        }
-        log.info("---------------------爬取小k娱乐网的内容爬取完毕,共爬取{}条内容", jsoupKDTOList.size());
+        Future<Integer> submitXd = poolTaskExecutor.submit(new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                log.info("---------------------开始爬取小刀娱乐网的内容");
+                List<JsoupKDTO> jsoupDDTOList = JsoupUtil.jsoupXd();
+                if (jsoupDDTOList != null && jsoupDDTOList.size() > 0) {
+                    jsoupDDTOList.forEach(jsoupKDTO -> {
+                        JsoupInfo jsoupInfo = new JsoupInfo().setTitleInfo(XIAOD).setTitleName(jsoupKDTO.getTitleName()).setUrl(jsoupKDTO.getUrl()).setArticleTime(jsoupKDTO.getArticleTime());
+                        xiaoKService.save(jsoupInfo);
+                        countDownLatch.countDown();
+                    });
+                }
+                log.info("---------------------爬取小刀娱乐网的内容爬取完毕,共爬取{}条内容", jsoupDDTOList.size());
+                return jsoupDDTOList.size();
+            }
+        });
 
-        log.info("---------------------开始爬取小刀娱乐网的内容");
-        List<JsoupKDTO> jsoupDDTOList = JsoupUtil.jsoupXd();
-        if (jsoupDDTOList != null && jsoupDDTOList.size() > 0) {
-            jsoupDDTOList.forEach(jsoupKDTO -> {
-                JsoupInfo jsoupInfo = new JsoupInfo().setTitleInfo(XIAOD).setTitleName(jsoupKDTO.getTitleName()).setUrl(jsoupKDTO.getUrl()).setArticleTime(jsoupKDTO.getArticleTime());
-                xiaoKService.save(jsoupInfo);
-            });
-        }
-        log.info("---------------------爬取小刀娱乐网的内容爬取完毕,共爬取{}条内容", jsoupDDTOList.size());
 
-        log.info("---------------------开始爬取流氓资源网的内容");
-        List<JsoupKDTO> jsoupMDTOList = JsoupUtil.jsoupLm();
-        if (jsoupMDTOList != null && jsoupMDTOList.size() > 0) {
-            jsoupMDTOList.forEach(jsoupMDTO -> {
-                JsoupInfo jsoupInfo = new JsoupInfo().setTitleInfo(LIUM).setTitleName(jsoupMDTO.getTitleName()).setUrl(jsoupMDTO.getUrl()).setArticleTime(jsoupMDTO.getArticleTime());
-                xiaoKService.save(jsoupInfo);
-            });
-        }
-        log.info("---------------------爬取流氓资源网的内容爬取完毕,共爬取{}条内容", jsoupMDTOList.size());
+        Future<Integer> submitLm = poolTaskExecutor.submit(new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                log.info("---------------------开始爬取流氓资源网的内容");
+                List<JsoupKDTO> jsoupMDTOList = JsoupUtil.jsoupLm();
+                if (jsoupMDTOList != null && jsoupMDTOList.size() > 0) {
+                    jsoupMDTOList.forEach(jsoupMDTO -> {
+                        JsoupInfo jsoupInfo = new JsoupInfo().setTitleInfo(LIUM).setTitleName(jsoupMDTO.getTitleName()).setUrl(jsoupMDTO.getUrl()).setArticleTime(jsoupMDTO.getArticleTime());
+                        xiaoKService.save(jsoupInfo);
+                    });
+                }
+                log.info("---------------------爬取流氓资源网的内容爬取完毕,共爬取{}条内容", jsoupMDTOList.size());
+                return jsoupMDTOList.size();
+            }
+        });
 
-        return R.ok().message("爬取小k娱乐网的内容爬取完毕,共爬取" + jsoupKDTOList.size() + "条内容,爬取小刀娱乐网的内容爬取完毕,共爬取" + jsoupDDTOList.size() + "条内容,爬取流氓资源网的内容爬取完毕,共爬取" + jsoupMDTOList.size() + "条内容");
+        return R.ok().message("爬取小k娱乐网的内容爬取完毕,共爬取" + submitXk.get() + "条内容,爬取小刀娱乐网的内容爬取完毕,共爬取" + submitXd.get()+ "条内容,爬取流氓资源网的内容爬取完毕,共爬取" + submitLm.get() + "条内容");
     }
 
     @ApiOperation(value = "爬取查询内容")
@@ -126,8 +155,10 @@ public class JsoupController {
     @ApiOperation(value = "EasyExcel读取今日的数据")
     @PostMapping("simpleWrite")
     public R simpleWrite() {
-        List<JsoupInfo> jsoupInfoList = xiaoKService.list();
-        EasyExcel.write("爬虫信息表" + System.currentTimeMillis() + ".xlsx", JsoupInfo.class).sheet().doWrite(jsoupInfoList);
+        LambdaQueryWrapper<JsoupInfo> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(JsoupInfo::getArticleTime, LocalDate.now());
+        List<JsoupInfo> Datelist = xiaoKService.list(lambdaQueryWrapper);
+        EasyExcel.write("爬虫信息表" + System.currentTimeMillis() + ".xlsx", JsoupInfo.class).sheet().doWrite(Datelist);
         return R.ok().message("读取成功");
     }
 }
