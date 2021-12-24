@@ -1,0 +1,174 @@
+2021-12-24 08:48:08,577 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 08:48:08,580 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 08:48:18,220 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 08:48:18,220 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 08:55:06,024 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 08:55:06,024 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 08:55:27,816 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 08:55:27,816 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 09:05:12,887 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 09:05:12,887 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 09:05:24,264 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 09:05:24,264 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 09:07:48,205 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 09:07:48,205 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 09:52:23,946 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 09:52:23,947 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 09:58:03,015 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 09:58:03,015 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 10:50:46,083 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 10:50:46,083 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 11:20:13,433 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 11:20:13,433 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 11:39:57,317 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 11:39:57,317 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 11:40:29,070 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 11:40:29,070 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 11:47:56,399 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 11:47:56,399 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 14:45:31,166 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 14:45:31,166 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 14:46:55,326 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 14:46:55,326 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 14:56:55,015 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 14:56:55,015 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 14:57:10,454 INFO {POS} {IP-DISABLED} valid: 192.168.190.1:8120@DEFAULT@DEFAULT_GROUP@@service-consumers, region: unknown, msg: client timeout after 15000, last beat: 1640329010712
+
+2021-12-24 14:57:26,171 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2021-12-24 14:57:26,171 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 14:58:05,734 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 14:58:05,734 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 14:58:09,247 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 14:58:09,247 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 15:13:44,830 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 15:13:44,830 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 15:14:14,726 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 15:14:14,726 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 15:19:38,860 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 15:19:38,860 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 15:20:28,259 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 15:20:28,259 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 16:09:02,225 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 16:09:02,225 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 16:09:31,121 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 16:09:31,121 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 16:53:58,508 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 16:53:58,508 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 17:00:28,719 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:00:28,719 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 17:02:10,280 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:02:10,280 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 17:02:17,104 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:02:17,104 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 17:03:15,089 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:03:15,089 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 17:04:51,546 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:04:51,546 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 17:08:56,632 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:08:56,632 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 17:09:45,897 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:09:45,897 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 17:10:53,903 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:10:53,903 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 17:11:29,541 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:11:29,542 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 17:12:40,553 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:12:40,553 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 17:13:29,867 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:13:29,867 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 192.168.190.1:8120_true,
+
+2021-12-24 17:14:49,612 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:14:49,612 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+
+2021-12-24 17:14:53,876 INFO DEFAULT_GROUP@@service-consumers {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8120:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:14:53,876 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-consumers, ips: 
+
+2021-12-24 17:24:55,765 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:24:55,765 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
+
+2021-12-24 17:26:02,948 INFO {POS} {IP-DISABLED} valid: 192.168.190.1:8110@DEFAULT@DEFAULT_GROUP@@service-produce, region: unknown, msg: client timeout after 15000, last beat: 1640337945794
+
+2021-12-24 17:26:06,909 INFO service: DEFAULT_GROUP@@service-produce {POS} {IP-ENABLED} valid: 192.168.190.1:8110@DEFAULT, region: unknown, msg: client beat ok
+
+2021-12-24 17:31:02,227 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2021-12-24 17:31:02,227 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 
+

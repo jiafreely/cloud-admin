@@ -1,0 +1,42 @@
+2021-12-24 08:47:54,214 INFO initializing Raft sub-system
+
+2021-12-24 08:47:54,222 INFO raft notifier started
+
+2021-12-24 08:47:54,014 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.190.1","key":"192.168.190.1:0","lastRefTime":0,"servePort":0,"site":"unknown","weight":1}]
+
+2021-12-24 08:47:54,257 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.190.1","key":"192.168.190.1:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2021-12-24 08:47:54,342 INFO add task com.alibaba.nacos.naming.domains.meta.public##TEST_GROUP@@test1
+
+2021-12-24 08:47:54,347 INFO finish loading all datums, size: 1 cost 133 ms.
+
+2021-12-24 08:47:54,348 INFO remove task com.alibaba.nacos.naming.domains.meta.public##TEST_GROUP@@test1
+
+2021-12-24 08:47:54,350 INFO cache loaded, datum count: 1, current term: 100
+
+2021-12-24 08:47:54,350 INFO finish to load data from disk, cost: 136 ms.
+
+2021-12-24 08:47:54,353 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-12-24 08:47:54,660 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-12-24 08:47:54,660 INFO [RAFT-NOTIFIER] datum is changed, key: com.alibaba.nacos.naming.domains.meta.public##TEST_GROUP@@test1, value: Service{name='TEST_GROUP@@test1', protectThreshold=10.0, appName='', groupName='DEFAULT_GROUP', metadata={}}
+
+2021-12-24 08:47:54,662 INFO add listener: com.alibaba.nacos.naming.iplist.public##TEST_GROUP@@test1
+
+2021-12-24 08:47:57,023 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-12-24 08:48:03,862 INFO server list is updated, new: 1 servers: [{"adWeight":0,"alive":false,"ip":"192.168.190.1","key":"192.168.190.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-12-24 08:48:03,862 INFO server list is updated, dead: 1, servers: [{"adWeight":0,"alive":false,"ip":"192.168.190.1","key":"192.168.190.1:0","lastRefTime":0,"lastRefTimeStr":"","servePort":0,"site":"unknown","weight":1}]
+
+2021-12-24 08:48:03,862 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.190.1","key":"192.168.190.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-12-24 08:48:04,355 INFO leader timeout, start voting,leader: {"heartbeatDueMs":5000,"ip":"192.168.190.1:8848","leaderDueMs":16322,"state":"FOLLOWER","term":100,"voteFor":""}, term: 100
+
+2021-12-24 08:48:05,896 INFO raft peers changed: [{"adWeight":0,"alive":false,"ip":"192.168.190.1","key":"192.168.190.1:8848","lastRefTime":0,"lastRefTimeStr":"","servePort":8848,"site":"unknown","weight":1}]
+
+2021-12-24 08:48:08,556 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-produce
+
+2021-12-24 14:46:55,325 INFO add listener: com.alibaba.nacos.naming.iplist.public##DEFAULT_GROUP@@service-consumers
+

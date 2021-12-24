@@ -1,0 +1,102 @@
+2021-12-23 14:14:40,106 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 14:14:40,116 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:49393, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,49393,107031399472400
+
+2021-12-23 14:14:40,117 INFO send udp packet: 10.111.26.200,49393,107031399472400
+
+2021-12-23 14:14:40,122 INFO received ack: {"type": "push-ack", "lastRefTime":"107031399472400", "data":""} from: 10.111.26.200:, cost: 49393 ms, unacked: 5, total push: 0
+
+2021-12-23 14:17:21,292 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 14:17:21,292 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:49393, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,49393,107192575240100
+
+2021-12-23 14:17:21,298 INFO send udp packet: 10.111.26.200,49393,107192575240100
+
+2021-12-23 17:21:34,656 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:21:34,659 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:62455, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,62455,118247079713800
+
+2021-12-23 17:21:34,659 INFO send udp packet: 10.111.26.200,62455,118247079713800
+
+2021-12-23 17:21:34,664 INFO received ack: {"type": "push-ack", "lastRefTime":"118247079713800", "data":""} from: 10.111.26.200:, cost: 62455 ms, unacked: 5, total push: 0
+
+2021-12-23 17:22:41,758 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:22:41,758 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:62455, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,62455,118314179159500
+
+2021-12-23 17:22:41,758 INFO send udp packet: 10.111.26.200,62455,118314179159500
+
+2021-12-23 17:22:51,760 INFO retry to push data, key: 10.111.26.200,62455,118314179159500
+
+2021-12-23 17:22:51,760 INFO send udp packet: 10.111.26.200,62455,118314179159500
+
+2021-12-23 17:23:01,761 INFO retry to push data, key: 10.111.26.200,62455,118314179159500
+
+2021-12-23 17:23:01,761 WARN max re-push times reached, retry times 2, key: 10.111.26.200,62455,118314179159500
+
+2021-12-23 17:23:32,891 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:23:32,891 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:53698, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,53698,118365311876200
+
+2021-12-23 17:23:32,891 INFO send udp packet: 10.111.26.200,53698,118365311876200
+
+2021-12-23 17:23:32,894 INFO received ack: {"type": "push-ack", "lastRefTime":"118365311876200", "data":""} from: 10.111.26.200:, cost: 53698 ms, unacked: 3, total push: 0
+
+2021-12-23 17:24:04,863 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:24:04,863 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:53698, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,53698,118397283882700
+
+2021-12-23 17:24:04,863 INFO send udp packet: 10.111.26.200,53698,118397283882700
+
+2021-12-23 17:24:14,864 INFO retry to push data, key: 10.111.26.200,53698,118397283882700
+
+2021-12-23 17:24:14,864 INFO send udp packet: 10.111.26.200,53698,118397283882700
+
+2021-12-23 17:24:24,865 INFO retry to push data, key: 10.111.26.200,53698,118397283882700
+
+2021-12-23 17:24:24,865 WARN max re-push times reached, retry times 2, key: 10.111.26.200,53698,118397283882700
+
+2021-12-23 17:24:56,197 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:24:56,197 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:62264, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,62264,118448618125000
+
+2021-12-23 17:24:56,197 INFO send udp packet: 10.111.26.200,62264,118448618125000
+
+2021-12-23 17:24:56,203 INFO received ack: {"type": "push-ack", "lastRefTime":"118448618125000", "data":""} from: 10.111.26.200:, cost: 62264 ms, unacked: 6, total push: 0
+
+2021-12-23 17:25:22,095 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:25:22,095 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:62264, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,62264,118474515736600
+
+2021-12-23 17:25:22,095 INFO send udp packet: 10.111.26.200,62264,118474515736600
+
+2021-12-23 17:25:32,096 INFO retry to push data, key: 10.111.26.200,62264,118474515736600
+
+2021-12-23 17:25:32,096 INFO send udp packet: 10.111.26.200,62264,118474515736600
+
+2021-12-23 17:25:42,098 INFO retry to push data, key: 10.111.26.200,62264,118474515736600
+
+2021-12-23 17:25:42,098 WARN max re-push times reached, retry times 2, key: 10.111.26.200,62264,118474515736600
+
+2021-12-23 17:28:53,777 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:28:53,777 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:53824, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,53824,118686198188300
+
+2021-12-23 17:28:53,777 INFO send udp packet: 10.111.26.200,53824,118686198188300
+
+2021-12-23 17:28:53,783 INFO received ack: {"type": "push-ack", "lastRefTime":"118686198188300", "data":""} from: 10.111.26.200:, cost: 53824 ms, unacked: 6, total push: 0
+
+2021-12-23 17:29:19,021 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
+
+2021-12-23 17:29:19,021 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:53824, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,53824,118711442176300
+
+2021-12-23 17:29:19,021 INFO send udp packet: 10.111.26.200,53824,118711442176300
+
+2021-12-23 17:29:29,024 INFO retry to push data, key: 10.111.26.200,53824,118711442176300
+
+2021-12-23 17:29:29,024 INFO send udp packet: 10.111.26.200,53824,118711442176300
+
+2021-12-23 17:29:39,025 INFO retry to push data, key: 10.111.26.200,53824,118711442176300
+
+2021-12-23 17:29:39,025 WARN max re-push times reached, retry times 2, key: 10.111.26.200,53824,118711442176300
+

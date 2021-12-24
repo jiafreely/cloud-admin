@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.util.StringUtils;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -16,7 +17,7 @@ import java.net.UnknownHostException;
  * @author xjh
  * @version 1.0
  * @ClassName: ServiceEduApplication
- //* @see DataSourceProxyAutoConfiguration 代理数据源类
+ * //* @see DataSourceProxyAutoConfiguration 代理数据源类
  * @date 2021/6/17 11:12
  */
 @Slf4j
@@ -24,6 +25,7 @@ import java.net.UnknownHostException;
 //@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
+@EnableScheduling
 public class ServiceProduceApplication {
     public static void main(String[] args) throws UnknownHostException {
         ConfigurableApplicationContext context = SpringApplication.run(ServiceProduceApplication.class, args);

@@ -35,7 +35,7 @@ mybatis-plus
 1. https://www.51mimu.com/html/news/1941.html
 2. https://blog.csdn.net/qq_44732146/article/details/118469470?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-4.control&spm=1001.2101.3001.4242
 3. https://blog.csdn.net/han949417140/article/details/116161114?ivk_sa=1024320u
-
+4. sentinel教程 https://javayz.blog.csdn.net/article/details/115840948
 
 
 1. feat - 新功能 feature

@@ -11,10 +11,36 @@ spring:
   application:
     name: service-consumers # 服务名
   datasource: # mysql数据库连接
+    druid:
+      # 初始连接数
+      initial-size: 5
+      # 最小连接池数量
+      min-idle: 10
+      # 最大连接池数量
+      max-active: 50
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      # 配置一个连接在池中最大生存的时间，单位是毫秒
+      max-evictable-idle-time-millis: 900000
+      # 配置检测连接是否有效
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      # 被弃用的连接在到达弃用超时后是否应该被移除
+      remove-abandoned: true
+      # 程序在回收连接的同时会打印日志
+      log-abandoned: true
+    type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/service_consumers?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: admin
     password: admin
+    # rabbitmq配置信息
   rabbitmq:
     host: 127.0.0.1
     port: 5672
