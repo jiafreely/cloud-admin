@@ -1,4 +1,0 @@
-2021-12-27 10:45:13,158 INFO DEFAULT_GROUP@@service-produce {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.190.1:8110:unknown:DEFAULT_1.0_true_false_DEFAULT]
-
-2021-12-27 10:45:13,160 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@service-produce, ips: 192.168.190.1:8110_true,
-

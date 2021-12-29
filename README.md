@@ -48,3 +48,6 @@ mybatis-plus
 1. chore - 构建过程或辅助工具的变动
 1. revert - 回退
 1. build - 打包
+# 注释
+es已关闭,如果要开启先启动elasticsearch.bat和kibana.bat,并且在com.cloud.service.config.elasticsearch.EsConfig关闭@Configuration注释  
+seata已关闭 要开启先开启seata-server.bat并在service-util pom.xml去掉seata注释

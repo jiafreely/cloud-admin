@@ -1,8 +1,0 @@
-2021-12-27 10:45:14,161 INFO DEFAULT_GROUP@@service-produce is changed, add it to push queue.
-
-2021-12-27 10:45:14,180 INFO serviceName: DEFAULT_GROUP@@service-produce changed, schedule push for: 10.111.26.200:65016, agent: Nacos-Java-Client:v1.3.3, key: 10.111.26.200,65016,8102075308200
-
-2021-12-27 10:45:14,180 INFO send udp packet: 10.111.26.200,65016,8102075308200
-
-2021-12-27 10:45:14,186 INFO received ack: {"type": "push-ack", "lastRefTime":"8102075308200", "data":""} from: 10.111.26.200:, cost: 65016 ms, unacked: 6, total push: 0
-

@@ -157,3 +157,9 @@ alipay:
   #json格式
   format: json
   log_path: E:\work\cloud-admin\logs
+
+elasticsearch:
+  username: elastic
+  authenticationPassword: 123456
+  port: 9200
+  host: 127.0.0.1

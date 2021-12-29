@@ -9,6 +9,6 @@ package com.cloud.service.demo;
  */
 public class FileTest {
     public static void main(String[] args) {
-
+        Integer test = 0;
     }
 }

@@ -65,7 +65,7 @@ public class AliPayController {
         //SDK已经封装掉了公共参数，这里只需要传入业务参数。以下方法为sdk的model入参方式(model和biz_content同时存在的情况下取biz_content)。
         AlipayTradeAppPayModel model = new AlipayTradeAppPayModel();
         //商品描述，可空
-        model.setBody("我的你的什么？你是我的优乐美");
+        model.setBody("我是你的什么？你是我的优乐美");
         //订单名称，必填
         model.setSubject("冬天的第一杯奶茶");
         //商户订单号，商户网站订单系统中唯一订单号，必填
