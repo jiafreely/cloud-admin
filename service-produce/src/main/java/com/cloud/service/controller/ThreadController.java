@@ -21,7 +21,9 @@ import java.util.concurrent.Future;
  * @author xjh
  * @version 1.0
  * @ClassName: ThreadController
- * @description:
+ * @description: 任务数 <= 核心线程数时，线程池中工作线程数 = 任务数
+ * 核心线程数 + 队列容量 < 任务数 <= 最大线程数 + 队列容量时，工作线程数 = 任务数 - 队列容量
+ * 当没有超过核心线程数，使用核心线程数，如果超过了就要进队列，如果超过队列就开继续开线程达到最大线程数为止，然后到达最大线程还加会触发拒绝策略
  * @date 2021/9/18 11:32
  */
 @Slf4j

@@ -122,7 +122,7 @@ public class IpUtil {
 		
 	}	
 	
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		
 		String configIPLink="";
 		String realIpLink="";

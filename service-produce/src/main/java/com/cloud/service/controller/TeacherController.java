@@ -4,7 +4,7 @@ package com.cloud.service.controller;
 import cn.hutool.core.lang.UUID;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.cloud.service.config.HttpServletContextAware;
+import com.cloud.service.config.AbstractHttpServletContextAware;
 import com.cloud.service.entity.ServiceProviderByHttpDTO;
 import com.cloud.service.entity.Teacher;
 import com.cloud.service.result.R;
@@ -37,7 +37,7 @@ import java.util.Map;
 @RestController
 @Api(description = "教师")
 @RequestMapping("/admin/produce/teacher")
-public class TeacherController extends HttpServletContextAware {
+public class TeacherController extends AbstractHttpServletContextAware {
 
     @Autowired
     private TeacherService teacherService;

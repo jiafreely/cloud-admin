@@ -38,9 +38,9 @@ import java.util.Map;
 @RestController
 @RequestMapping("admin/consumers/ucenter-member")
 public class UcenterMemberController {
-    private static final String restUrl = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByRestTemplate";
-    private static final String httpPostUrl = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByHttpPost";
-    private static final String httpGetUrl = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByHttpGet";
+    private static final String REST_URL = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByRestTemplate";
+    private static final String HTTP_POST_URL = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByHttpPost";
+    private static final String HTTP_GET_URL = "http://10.111.26.200:8110/admin/produce/teacher/serviceProviderByHttpGet";
     @Autowired
     private UcenterMemberService ucenterMemberService;
     @Autowired
@@ -87,7 +87,7 @@ public class UcenterMemberController {
         log.info(String.valueOf(stringObjectMap));
 
 
-        HttpResponse response = HttpRequest.post(httpPostUrl)
+        HttpResponse response = HttpRequest.post(HTTP_POST_URL)
                 .header("X-Tenant-ID", "tenantId123")
                 .header("X-Request-ID", "Request-ID123")
                 .form(stringObjectMap)
@@ -151,7 +151,7 @@ public class UcenterMemberController {
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("JF_RN", UUID.fastUUID().toString().replaceAll("-", ""));
         HttpEntity<String> entity = new HttpEntity<String>(headers);
-        ResponseEntity<String> exchange = restTemplate.exchange(restUrl, HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> exchange = restTemplate.exchange(REST_URL, HttpMethod.GET, entity, String.class);
         List<String> jfSn = exchange.getHeaders().get("res");
         String res = exchange.getHeaders().getFirst("res");
         System.out.println("res:" + res);
@@ -193,7 +193,7 @@ public class UcenterMemberController {
         UcenterMember ucenterMember = ucenterMemberService.getById(id);
         ucenterMember.setId(id);
         ucenterMember.setNickname(RandomUtils.getSixBitRandom());
-        R r = restTemplate.getForObject(restUrl, R.class);
+        R r = restTemplate.getForObject(REST_URL, R.class);
         produceService.updateById("1426565602478309378");
         ucenterMemberService.updateById(ucenterMember);
         return R.ok().data("code", "success");

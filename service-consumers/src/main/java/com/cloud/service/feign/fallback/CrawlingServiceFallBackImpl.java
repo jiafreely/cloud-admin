@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class CrawlingServiceFallBack implements CrawlingService {
+public class CrawlingServiceFallBackImpl implements CrawlingService {
     @Override
     public R addJsoup() {
         log.error("熔断保护");

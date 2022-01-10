@@ -46,6 +46,7 @@ import java.util.Map;
  * ElasticSearch添加索引 https://www.cnblogs.com/huanshilang/p/12616310.html
  * elasticsearch对已存在的索引增加mapping字段 https://www.cnblogs.com/tjp40922/p/13090419.html
  * text类型可以分词,keyword不能分词
+ * 官方文档:https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.3/_index_apis.html
  * @date 2021/12/28 10:07
  */
 @SpringBootTest(classes = ServiceConsumersApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -243,13 +244,13 @@ public class ElasticSearchTest {
         SearchRequest request = new SearchRequest("hero");
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
-        // 不会对搜索词进行分词处理，而是作为一个整体与目标字段进行匹配，若完全匹配，则可查询到
         //mustNot的使用（mustMot不能包含的查询条件）
         //QueryBuilders.wildcardQuery对分词进行模糊匹配 QueryBuilders.wildcardQuery("name","*胡*"));
+        // 不会对搜索词进行分词处理，而是作为一个整体与目标字段进行匹配，若完全匹配，则可查询到
         boolQueryBuilder.must(new TermQueryBuilder("country", "魏"));
         // RangeQueryBuilder范围查询，对age进行范围查询
         boolQueryBuilder.must(new RangeQueryBuilder("longevity").gte(50));
-        sourceBuilder.query(boolQueryBuilder);
+        //sourceBuilder.query(boolQueryBuilder);
         sourceBuilder.from(2).size(2);
         sourceBuilder.query(boolQueryBuilder);
         sourceBuilder.sort("longevity", SortOrder.DESC);

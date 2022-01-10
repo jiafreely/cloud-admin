@@ -28,7 +28,7 @@ import javax.servlet.http.HttpSession;
  */
 
 @Controller
-public abstract class HttpServletContextAware extends WebContentGenerator {
+public abstract class AbstractHttpServletContextAware extends WebContentGenerator {
     /** 子类也可以使用的通用Logger */
     protected final Logger logger = LoggerFactory.getLogger(getClass());
 

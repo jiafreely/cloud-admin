@@ -14,18 +14,18 @@ import java.util.Random;
  */
 public class RandomUtils {
 
-	private static final Random random = new Random();
+	private static final Random RANDOM = new Random();
 
-	private static final DecimalFormat fourdf = new DecimalFormat("0000");
+	private static final DecimalFormat FOURDF = new DecimalFormat("0000");
 
-	private static final DecimalFormat sixdf = new DecimalFormat("000000");
+	private static final DecimalFormat SXIDF = new DecimalFormat("000000");
 
 	public static String getFourBitRandom() {
-		return fourdf.format(random.nextInt(10000));
+		return FOURDF.format(RANDOM.nextInt(10000));
 	}
 
 	public static String getSixBitRandom() {
-		return sixdf.format(random.nextInt(1000000));
+		return SXIDF.format(RANDOM.nextInt(1000000));
 	}
 
 	/**

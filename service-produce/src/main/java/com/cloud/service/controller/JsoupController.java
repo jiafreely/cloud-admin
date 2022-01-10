@@ -41,7 +41,7 @@ import java.util.concurrent.Future;
 @RequestMapping("/admin/xiaok")
 public class JsoupController {
     private static final String XIAOK = "小k娱乐网";
-    private static final String XIAOKSearch = "https://www.kjsv.com/search/comprehensive.do";
+    private static final String XIAOK_SEARCH = "https://www.kjsv.com/search/comprehensive.do";
 
 
     private static final String XIAOD = "小刀娱乐网";
@@ -121,7 +121,7 @@ public class JsoupController {
         paramMap.put("keywords", keyWord);
         paramMap.put("pageNo", "1");
         paramMap.put("pageSize", "5");
-        String post = HttpUtil.post(XIAOKSearch, paramMap);
+        String post = HttpUtil.post(XIAOK_SEARCH, paramMap);
         JSONObject jsonObject = JSONUtil.parseObj(post);
         return jsonObject;
     }

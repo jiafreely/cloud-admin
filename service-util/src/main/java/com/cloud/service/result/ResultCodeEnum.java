@@ -66,6 +66,15 @@ public enum ResultCodeEnum {
 
     private String message;
 
+    /**
+     * @description: 返回码定义枚举类
+     * @param: success
+     * @param: code
+     * @param: message
+     * @return:
+     * @author: xjh
+     * @date: 2022/1/10 14:38
+     */
     ResultCodeEnum(Boolean success, Integer code, String message) {
         this.success = success;
         this.code = code;

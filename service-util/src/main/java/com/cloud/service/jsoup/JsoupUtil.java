@@ -26,7 +26,7 @@ public class JsoupUtil {
 
     //小K
     private static final String XKURL = "https://www.kjsv.com/?jdfwkey=zhmb01";
-    private static final String XKPreURL = "https://www.kjsv.com";
+    private static final String XKPREURL = "https://www.kjsv.com";
 
     //小刀
     private static final String XDURL = "https://www.xd0.com/";
@@ -69,7 +69,7 @@ public class JsoupUtil {
                     System.out.println(url + "\t" + titleName + "\t" + substring);
                     JsoupKDTO jsoupKDTO = new JsoupKDTO();
                     jsoupKDTO.setTitleName(titleName);
-                    jsoupKDTO.setUrl(XKPreURL + url);
+                    jsoupKDTO.setUrl(XKPREURL + url);
                     jsoupKDTO.setArticleTime(localDate);
                     jsoupKDTOList.add(jsoupKDTO);
                 }
